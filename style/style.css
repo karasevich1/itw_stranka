@@ -17,7 +17,7 @@ body {
 }
 
 .top-bg{
-    background-image: url('/img/bg.jpg');
+    background-image: url('./img/bg.jpg');
     margin: 0 calc(-50vw + 50%);
     
 }
@@ -306,7 +306,7 @@ body {
     width: 10px;
     height: 10px;
     position: absolute;
-    background-image: url('/img/footer_list_bullet.gif');
+    background-image: url('./img/footer_list_bullet.gif');
     left: 0;
     top: 20%;
   }
