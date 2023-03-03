@@ -1,0 +1,363 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.top-bg{
+    background-image: url(/img/bg.jpg);
+    margin: 0 calc(-50vw + 50%);
+    
+}
+
+ .o-predmetu{
+    background-color: #E6E6E6;
+    margin: 0 calc(-50vw + 50%);
+    padding-top: 5px;
+    padding-left: 22%;
+    padding-bottom: 4%;
+    margin-top: -18px;
+  }
+
+.top{
+    padding-left: 15.3%; 
+    padding-top: 20px;
+}
+
+.title-name {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: 0px;
+    color: #B6784B;
+}
+
+/* .topnav {
+    background-color: transparent;
+    overflow: hidden;
+    margin-top: 40px; 
+    padding: 0;
+    margin-bottom: 0px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+  /* Style the links inside the navigation bar */
+  /* .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 5px 17px;
+    margin-left: -10px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  /* Change the color of links on hover */
+  /* .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    
+  } */
+ 
+  .topnav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .topnav li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .topnav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding-top: 40px;
+    
+    
+  }
+  
+  .topnav li:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-100%);
+    width: 17px;
+    height: 11px;
+    background-image: url(/img/menu_bullet.gif);
+  }
+
+  .topnav li a:first-child{
+    padding-left: 0px;
+
+  }
+  
+  
+  .ITW-predmet{
+    font-size: 20px;
+    color: #b15e23;
+  }
+  
+  .ITW-popis{
+    font-size: 12px;
+    line-height: 18px;
+    width: 82%;
+  }
+
+  .seznam-prednasek{
+    margin-top: 0px;
+  }
+  
+  h2{
+    font-size: 20px;
+    color: #b15e23;
+  }
+
+  .seznam-prednasek a {
+    float:left;
+    margin-top: 0px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: dotted;
+    border-color: #b15e23;
+    border-width: 1px;
+    padding-right:85%;
+    padding-bottom: 3px;
+    
+  }
+
+  .seznam-prednasek p {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #656565;
+  }
+
+  .seznam-prednasek img{
+    margin-top: -10px;
+  }
+  
+  .img1{
+    margin-left: 0px;
+  }
+
+  .img2{
+    float: left;
+  }
+
+  .prednaska2 a{
+    padding-right: 85%;
+    padding-top: 15px;
+  }
+  
+  .prednaska2 p{
+    padding-top: 100px;
+    margin-top: 0;
+    
+  }
+
+  .prednaska3 a{
+    margin-top: 0px;
+  }
+  
+  .img3{
+    margin-left: 0px;
+  }
+
+  .prednaska4 a{
+    padding-right: 90%;
+  }
+  
+  .prednaska4 p{
+   padding-top: 0%;
+   margin-left: 0px;
+  }
+
+  .prednaska4 img{
+    margin-top: -5px;
+  }
+  
+  .tabulka {
+    border: black;
+    border-style: solid;
+    width: 50%;
+    border-width: 3.5px;
+  }
+
+  .tabulka th{
+    border: black;
+    border-style: solid;
+    border-left-style: dotted;
+    border-top-style: dotted;
+    border-width: 2.5px;
+    background-color: #b15e23;
+    opacity: 60%;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .tabulka td{
+    border: black;
+    border-style: solid;
+    font-size: 14px;
+    border-left: none;
+    border-right: none;
+    border-top-width: 2px;
+    border-bottom-width: 1px;
+    
+  }
+
+  .tabulka td{
+    text-align: center;
+  }
+
+  .tabulka td:first-child{
+    text-align:start;
+  }
+
+  .Cviceni-seznam{}
+  
+  .Cviceni-seznam div{
+    height: 105px;
+  }
+  
+  .Cviceni-seznam p{
+    position: absolute;
+    /* position: absolute;
+    margin: 0;
+    padding-top: 70px;
+    padding-left: 30px;
+    padding-right: 30px; */
+    width:65%;
+    float: left;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: auto;
+    font-size: 13px;
+    color: #656565;
+    border-style: dotted;
+    border-color: #b15e23;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-width: 1.5px;
+    height: 28px;
+    padding-left: 70px;
+    
+
+  }
+
+  .Cviceni-seznam a{
+    position: absolute;
+    display: block;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+
+  .Cviceni-seznam img{
+    float: left;
+    margin-top: 30px;
+  }
+
+  .Kontakty h2{
+    color: white;
+    font-weight: lighter;
+    padding-top: 20px;
+  }
+  
+  .Kontakty div{
+    font-size: 13px;
+    display: inline;
+    line-height: 20px;
+  }
+  
+  .Kontakty a{
+    margin-left: 70px;
+    text-decoration: none;
+    color: #CB9873;
+    
+  }
+  
+  .Kontakty dt{
+    width: auto;
+    float: left;
+    color: white;
+    font-weight: 50;
+  }
+
+  .Predmety h2{
+    color: white;
+    font-weight: lighter;
+  }
+  
+  .custom-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 20px;
+    padding-bottom: 30px;
+    
+    
+  }
+  
+  .custom-list a{
+    text-decoration: none;
+    color: #CB9873;
+  }
+  
+  .custom-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 13px;
+  }
+  
+  .custom-list li::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url(/img/footer_list_bullet.gif);
+    width: 8px;
+    height: 8px;
+    left: 0;
+    top: 20%;
+  }
+
+  footer{
+    background-color: #441F05;
+    margin: 0 calc(-50vw + 50%);
+    padding-top: 0px;
+    padding-left: 22%;
+    margin-bottom: -10%;
+  }
