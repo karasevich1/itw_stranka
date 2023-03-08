@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 html {
@@ -17,7 +18,7 @@ body {
 }
 
 .top-bg{
-    background-image: url(img/bg.JPG);
+    background-image: url(/img/bg.JPG);
     margin: 0 calc(-50vw + 50%);
     
 }
@@ -51,35 +52,6 @@ body {
     margin-top: 0px;
     color: #B6784B;
 }
-
-/* .topnav {
-    background-color: transparent;
-    overflow: hidden;
-    margin-top: 40px; 
-    padding: 0;
-    margin-bottom: 0px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-  
-  /* Style the links inside the navigation bar */
-  /* .topnav a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 5px 17px;
-    margin-left: -10px;
-    text-decoration: none;
-    font-size: 12px;
-  }
-  
-  /* Change the color of links on hover */
-  /* .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-    
-  } */
  
   .topnav {
     list-style: none;
@@ -133,16 +105,81 @@ body {
     width: 82%;
   }
 
-  .seznam-prednasek{
-    margin-top: 0px;
+  .seznam-prednasek h2{
+    margin: 0;
   }
+
+  .seznam-prednasek{
+    width: 550px;
+    margin-top: 20px;
+    float: left;
+  }
+
+  .tabulka-prednasek{
+    height: 300px;
+    margin-top: 30px;
+  }
+
+  .tabulka-prednasek div:nth-child(2n){
+    margin-right: 0px;
+  }
+  
+  .tabulka-prednasek div{
+    width: 250px;
+    height: 130px;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 25px;
+
+  }
+
+
+  .tabulka-prednasek div a{
+    position: absolute;
+    margin-left: 14px;
+    text-decoration: none;
+    border-bottom: dotted;
+    color:black;
+    font-weight: bold;
+    border-width: 2px;
+    border-color:#CB9873;
+    padding-right: 30px;
+    font-size: 15px;
+    width: 160px;
+  }
+
+  .tabulka-prednasek div p{
+    margin-bottom: 0;
+    margin-top: -45px;
+    position:absolute;
+    width: 150px;
+    padding-left: 72px;
+    font-size: 13px;
+    color: #656565;
+    line-height: 19px;
+    width: 190px;
+    word-spacing: 1px;
+    letter-spacing:0px;
+    
+    
+
+  }
+
+  .prednaska-column{
+    width: 200px;
+    height: 290px;
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 65px;
+  }
+
   
   h2{
     font-size: 20px;
     color: #b15e23;
   }
 
-  .seznam-prednasek a {
+  /* .seznam-prednasek a {
     float:left;
     margin-top: 0px;
     text-decoration: none;
@@ -152,13 +189,16 @@ body {
     border-bottom: dotted;
     border-color: #b15e23;
     border-width: 1px;
-    padding-right:85%;
+    padding-right:30%;
     padding-bottom: 3px;
     
   }
+    
+
 
   .seznam-prednasek p {
     margin-top: 30px;
+    padding-top: 30px;
     font-size: 13px;
     color: #656565;
   }
@@ -167,22 +207,34 @@ body {
     margin-top: -10px;
   }
   
-  .img1{
-    margin-left: 0px;
+  .prednaska1 a{
+    margin-top: -50px;
+    margin-left: 60px;
+    padding-right: 30px;
   }
+
+    
+  .prednaska1 p{
+    margin-top: -50px;
+    margin-left: 60px;
+    
+  }
+
+  .img1{}
 
   .img2{
     float: left;
   }
 
   .prednaska2 a{
-    padding-right: 85%;
-    padding-top: 15px;
+    padding-right: 30%;
+    margin-left: 58px;
+    margin-top: -55px;
   }
   
   .prednaska2 p{
-    padding-top: 100px;
-    margin-top: 0;
+    padding-top: 35px;
+    
     
   }
 
@@ -191,26 +243,33 @@ body {
   }
   
   .img3{
-    margin-left: 0px;
+    float: left;
   }
 
   .prednaska4 a{
-    padding-right: 90%;
+    padding-right: 50%;
   }
   
   .prednaska4 p{
-   padding-top: 0%;
-   margin-left: 0px;
+   padding-top: 30px;
+   margin-left: 10px;
   }
 
   .prednaska4 img{
-    margin-top: -5px;
+    float: left;
+  } */
+  
+  .Hodnoceni{
+    width: 500px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    
   }
   
   .tabulka {
     border: black;
     border-style: solid;
-    width: 50%;
+    width: 100%;
     border-width: 3.5px;
   }
 
@@ -245,38 +304,44 @@ body {
     text-align:start;
   }
 
-  .Cviceni-seznam{}
+  .Cviceni-popis{
+    height: 500px;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
   
-  .Cviceni-seznam div{
+  .Cviceni-seznam h2{
+    margin-bottom: 23px;
+    margin-top: 20px;
+  }
+  
+  .Cviceni-seznam{
+    width: 500px;
+    float: right;
+    padding-right: 200px;
+    height: auto;
+    background-color: #E6E6E6;
+    margin: 0 calc(-50vw + 50%);
+    padding-bottom: 40px;
+  }
+  
+  .Cviceni-popis div{
     height: 105px;
   }
-  
-  .Cviceni-seznam p{
-    position: absolute;
-    /* position: absolute;
-    margin: 0;
-    padding-top: 70px;
-    padding-left: 30px;
-    padding-right: 30px; */
-    width:65%;
-    float: left;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: auto;
-    font-size: 13px;
-    color: #656565;
-    border-style: dotted;
-    border-color: #b15e23;
-    border-top-style: none;
-    border-left-style: none;
-    border-right-style: none;
-    border-width: 1.5px;
-    height: 28px;
+
+  .Cviceni-popis p{
+    padding-top: 28px;
     padding-left: 70px;
-    
-
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 18px;
+    border-bottom: dotted;
+    height: 60px;
+    border-width: 1.5px;
+    color: #656565;
+    border-color: #b15e23;
   }
-
+  
   .Cviceni-seznam a{
     position: absolute;
     display: block;
@@ -291,10 +356,18 @@ body {
     margin-top: 30px;
   }
 
+  .kontakty-predmety div{
+    display: inline-block;
+  }
+
+  .Kontakty{
+    width: 300px;
+  }
+  
   .Kontakty h2{
     color: white;
     font-weight: lighter;
-    padding-top: 20px;
+    margin-bottom: 35px;
   }
   
   .Kontakty div{
@@ -307,7 +380,6 @@ body {
     margin-left: 70px;
     text-decoration: none;
     color: #CB9873;
-    
   }
   
   .Kontakty dt{
@@ -317,9 +389,22 @@ body {
     font-weight: 50;
   }
 
+  .Kontakty dl{
+    margin-top: 0px;
+    padding-bottom: 0px;
+  }
+
+
+  .Predmety{
+    width: 300px;
+  }
+  
   .Predmety h2{
     color: white;
     font-weight: lighter;
+    margin-top:20px;
+    padding-top: 0px;
+
   }
   
   .custom-list {
@@ -361,3 +446,76 @@ body {
     padding-left: 22%;
     margin-bottom: -10%;
   }
+
+  @media (min-width: 576px) {
+ 
+  body {
+    max-width:100%;
+    
+  }
+
+  .top{
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 100%;
+        
+  }
+
+  .top-bg{
+    background-color: #411D07;
+    
+  }
+
+  .topnav{
+    margin-top: 70px;
+    background-color: #B15E23;
+    margin-left: -20px;
+    width: 100%;
+    height: 135px;
+  }
+
+  .topnav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-right: 30px;
+    padding-top: 17px;
+    
+  }
+  
+  .topnav li a:first-child{
+    padding-left: 28px;
+
+  }
+
+  .topnav li {
+    display: inline-block;
+    position: relative;
+  }
+
+  .topnav li:first-child {
+  }
+
+  .o-predmetu{
+    width: 1;
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 4%;
+    margin-top: -18px;
+
+  }
+
+  .ITW-popis{
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    display: block;
+  }
+
+  @media (min-width:768px) {
+    
+  }
+
+}
