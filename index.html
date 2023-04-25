@@ -2,27 +2,72 @@
 
 <!-- saved from url=(0071)https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/sablona.html -->
 <html>
-    <head>
-        <link href = "style/style.css" rel="stylesheet" type="text/css">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <link href = "style/style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">  
     <!-- Hlavicka dokumentu -->
-        <title>ITW - tvorba webových stránek</title>
-    </head>
+    <title>ITW - tvorba webových stránek</title>
+</head>
 <body>
     <!-- Telo dokumentu -->
     <div class="top-bg">
         <div class="top">
-            <a class="title-name" href="./sablona.html">ITW</a>
-            <h1 class="subtitle">Tvorba webových stránek</h1>
-            <ul class="topnav">
-                <li><a href="#ITW">Index</a></li>
-                <li><a href="#Prednasky">O předmětu</a></li>
-                <li><a href="#Prehled">Přednášky</a></li>
-                <li><a href="#Cviceni">Cvičení</a></li>
-                <li><a href="#Kontakty">Hodnocení</a></li>
-                <li><a href="#Predmety">Kontakt</a></li>
-                <li><a href="#Souvisejici">Související</a></li>
-            </ul>
+            <div class="itw-bg">
+                <a class="title-name" href="./sablona.html">ITW</a>
+                <h1 class="subtitle">Tvorba webových stránek</h1>
+            </div>
+            
+            <div class="container">
+                <div>
+                    <span>
+                        <a href="#ITW"><i class="fa-solid fa-house-chimney fa-xs" style="color: #ffffff;"></i></a>
+                        <a class="first-child" href="#ITW">Index</a>
+                    </span>    
+                </div>   
+                
+                <div class="nav-container">
+                    <input id="checkbox" type="checkbox">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div> 
+                    
+                    <nav class="nav-block"> 
+                        <ul class="topnav">
+                            <li>
+                                <a href="#Prednasky"><i class="fa-solid fa-circle-info fa-xs" style="color: #ffffff;"></i></a>
+                                <a href="#Prednasky">O předmětu</a>
+                            </li>
+                            <li>
+                                <a href="#Prehled"><i class="fa-solid fa-tv fa-xs" style="color: #ffffff;"></i></a>
+                                <a href="#Prehled">Přednášky</a>
+                            </li>
+                            <li>
+                                <a href="#Cviceni"><i class="fa-solid fa-hammer fa-xs" style="color: #ffffff;"></i></a>
+                                <a href="#Cviceni">Cvičení</a>
+                            </li>
+                            <li>
+                                <a href="#Kontakty"><i class="fa-solid fa-face-grin-beam-sweat fa-xs" style="color: #ffffff;"></i></a>
+                                <a href="#Kontakty">Hodnocení</a>
+                            </li>
+                            <li>
+                                <a href="#Predmety"><i class="fa-solid fa-envelope fa-xs" style="color: #ffffff;"></i></a>
+                                <a href="#Predmety">Kontakt</a>
+                            </li>
+                            <li>
+                                <a href="#Souvisejici"><i class="fa-solid fa-code-branch fa-xs" style="color: #ffffff;"></i></a>
+                                <a href="#Souvisejici">Související</a>
+                            </li>
+                        </ul>
+                    </nav>
+                
+                </div>
+            
+            </div>        
+        
         </div>
     </div>  
         <section class="o-predmetu">
@@ -34,109 +79,134 @@
                 nec, fermentum fringilla, vehicula vitae, justo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. In rutrum.
                 Maecenas aliquet accumsan leo. Suspendisse sagittis ultrices augue. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
                 aliquid ex ea commodi consequatur? Curabitur sagittis hendrerit ante. Nullam sit amet magna in magna gravida vehicula. Aliquam erat volutpat.
-                </p>
+            </p>
         </section>
+        <section class="main">
+            <div class="seznam-prednasek">
+                <div class="tabulka-prednasek">
+                    <h2 id="Prednasky-title">Přednášky</h2>
+                    <div class="tabulka-prednasek-grid">
+                        <div class="prednaska">
+                            <img class="img1" src="./img/icon1.gif" alt="img1">
+                            <div class="prednaska-section">
+                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p01/prednaska.html">HTML a HTML5</a>
+                                <p>Integer imperdiet lectus quis justo. Sed elit dui, pellentesque a,faucibus vel, interdum nec, diam</p>
+                            </div>    
+                        </div>
+
+                        <div id="child2" class="prednaska">
+                            <img class="img2" src="./img/icon2.gif" alt="img1">
+                            <div class="prednaska-section">
+                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p02/prednaska.html">CSS a CSS3</a>
+                                <p>Etiam neque. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero</p>
+                            </div>    
+                        </div>
+                    
+                        <div class="prednaska">
+                            <img class="img3" src="./img/icon3.gif" alt="img1">
+                            <div class="prednaska-section">
+                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p03/prednaska.html">Tvorba Layoutů</a>
+                                <p>Donec vitae arcu. Quis autem vel eum iure reprehenderit qui in eavoluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+                            </div>
+                        </div>
+
+                        <div id="child4" class="prednaska">
+                            <img class="img4" src="./img/icon4.gif" alt="img1">
+                            <div class="prednaska-section">
+                                <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p04/prednaska.html">Optimizace</a>
+                                <p>Phasellus faucibus molestie nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="Hodnoceni">
+                    <h2 id="Prehled">Přehled výsledků</h2>
+                    <div class="tabulka-position">
+                        <table class="tabulka">
+                            <tr><th rowspan="3" class="jmeno">Jméno</th><th colspan="6">Body</th></tr>
+                            <tr><th colspan="2">2010</th><th colspan="2">2011</th><th colspan="2">2012</th></tr>
+                            <tr><th>Pulsem</th><th>Zk.</th><th>Pulsem</th><th>Zk.</th><th>Pulsem</th><th>Zk.</th></tr>
+                            <tr><td>Jan Novák</td><td>22</td><td>78</td><td>23</td><td>80</td><td>10</td><td>-</td></tr>
+                            <tr><td>Zuzana Cerna</td><td>15</td><td>50</td><td>20</td><td>80</td><td>25</td><td>100</td></tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>    
         
-        <section class="seznam-prednasek">
-             <h2 id="Prednasky-title">Přednášky</h2>
-             <div class="tabulka-prednasek">
-                <div class="prednaska">
-                    <img class="img1" src="./img/icon1.gif" alt="img1">
-                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p01/prednaska.html" style="width: 160px">HTML a HTML5</a>
-                    <p>Integer imperdiet lectus quis justo. Sed elit dui, pellentesque a,faucibus vel, interdum nec, diam</p>
-                </div>
-
-                <div id="child2"class="prednaska">
-                    <img class="img2" src="./img/icon2.gif" alt="img1">
-                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p02/prednaska.html" style="width: 160px;">CSS a CSS3</a>
-                    <p>Etiam neque. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero</p>
-                </div>
-             
-                <div class="prednaska">
-                    <img class="img3" src="./img/icon3.gif" alt="img1">
-                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p03/prednaska.html" style="width: 160px">Tvorba Layoutů</a>
-                    <p>Donec vitae arcu. Quis autem vel eum iure reprehenderit qui in eavoluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-                </div>
-
-                <div id="child4" class="prednaska">
-                    <img class="img4" src="./img/icon4.gif" alt="img1">
-                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p04/prednaska.html">Optimizace</a>
-                    <p>Phasellus faucibus molestie nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-                </div>
-                </div>
-        </section>
-
-        <section class="Cviceni-seznam">
-            <div class="Cviceni-popis">
+            <div class="Cviceni-seznam">
                 <h2 id="Cviceni">Cvičení</h2>
-            
+                
                 <div>
-                    <img src="./img/news_icon.gif" alt="img1">
                     <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c1">DNS a HTTP</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    <div class="cviceni-content">
+                        <img src="./img/news_icon.gif" alt="img1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    </div>    
                 </div>
 
                 <div>
-                    <img src="./img/news_icon.gif" alt="img2">
                     <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c2">Základy jazyka HTML</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    <div class="cviceni-content">
+                        <img src="./img/news_icon.gif" alt="img2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    </div>    
                 </div>
 
                 <div>
-                    <img src="./img/news_icon.gif" alt="img3">
                     <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c3">Styl textu</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    <div class="cviceni-content">
+                        <img src="./img/news_icon.gif" alt="img3">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    </div>
                 </div>
 
                 <div>
-                    <img src="./img/news_icon.gif" alt="img4">
                     <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/cviceni/#c4">CSS rozložení stránky</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    <div class="cviceni-content">
+                        <img src="./img/news_icon.gif" alt="img4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet</p>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section class="Hodnoceni">
-            <h2 id="Prehled">Přehled výsledků</h2>
-            <table class="tabulka">
-                <tr><th rowspan="3">Jméno</th><th colspan="6">Body</th></tr>
-                <tr><th colspan="2">2010</th><th colspan="2">2011</th><th colspan="2">2012</th></tr>
-                <tr><th>Pulsem</th><th>Zk.</th><th>Pulsem</th><th>Zk.</th><th>Pulsem</th><th>Zk.</th></tr>
-                <tr><td>Jan Novák</td><td>22</td><td>78</td><td>23</td><td>80</td><td>10</td><td>-</td></tr>
-                <tr><td>Zuzana Cerna</td><td>15</td><td>50</td><td>20</td><td>80</td><td>25</td><td>100</td></tr>    
-            </table>
-        </section>
-    
         <footer>
             <div class="kontakty-predmety">
-            <div class="Kontakty">
-                <h2 id="Kontakty">Kontaktujte nás</h2>
-                <dl>
-                    <div>
-                        <dt>Garant:</dt>
-                        <dd><a href="https://www.fit.vut.cz/person/burgetr/.cs">burgetr@fit.vut.cz</a></dd>
-                    </div>                    
-                    <div>
-                        <dt>Přednášející:</dt>
-                        <dd><a href="https://www.fit.vut.cz/person/hynek/.en">hynek@fit.vut.cz</a></dd>
-                    </div> 
-                    <div>   
-                        <dt>Cvičící:</dt> 
-                        <dd><a href="https://www.fit.vut.cz/person/ivasko/.cs">ivasko@fit.vut.cz</a></dd>
-                    </div> 
-                </dl>
-            </div>
+                <div class="Kontakty">
+                    <h2 id="Kontakty">Kontaktujte nás</h2>
+                    <dl>
+                        <div>
+                            <dt>Garant:</dt>
+                            <dd><a href="https://www.fit.vut.cz/person/burgetr/.cs">burgetr@fit.vut.cz</a></dd>
+                        </div>                    
+                        <div>
+                            <dt>Přednášející:</dt>
+                            <dd><a href="https://www.fit.vut.cz/person/hynek/.en">hynek@fit.vut.cz</a></dd>
+                        </div> 
+                        <div>   
+                            <dt>Cvičící:</dt> 
+                            <dd><a href="https://www.fit.vut.cz/person/ivasko/.cs">ivasko@fit.vut.cz</a></dd>
+                        </div> 
+                    </dl>
+                </div>
         
-            <div class="Predmety">
-                <h2 id="Predmety">Související předměty</h2>
-                <ul class="custom-list">
-                    <li><a href="https://www.fit.vut.cz/study/course/IIS/.cs">Informační systémy</a></li>
-                    <li><a href="https://www.fit.vut.cz/study/course/PIS/.cs">Pokročilé informační systémy</a></li>
-                    <li><a href="https://www.fit.vut.cz/study/course/259563/.cs">Analýza informačních systémů</a></li>
-                    <li><a href="https://www.fit.vut.cz/study/course/ISJ/.cs#:~:text=Studenti%20se%20sezn%C3%A1m%C3%AD%20s%20modern%C3%ADmi,vyv%C3%ADjet%20jednoduch%C3%A9%20aplikace%20s%20pou%C5%BEit%C3%ADm">Skriptovací jazyky</a></li>
-                </ul>
-            </div>
+                <div class="Predmety">
+                    <h2 id="Predmety">Související předměty</h2>
+                    <ul class="custom-list">
+                        <li><a href="https://www.fit.vut.cz/study/course/IIS/.cs">Informační systémy</a></li>
+                        <li><a href="https://www.fit.vut.cz/study/course/PIS/.cs">Pokročilé informační systémy</a></li>
+                        <li><a href="https://www.fit.vut.cz/study/course/259563/.cs">Analýza informačních systémů</a></li>
+                        <li><a href="https://www.fit.vut.cz/study/course/ISJ/.cs#:~:text=Studenti%20se%20sezn%C3%A1m%C3%AD%20s%20modern%C3%ADmi,vyv%C3%ADjet%20jednoduch%C3%A9%20aplikace%20s%20pou%C5%BEit%C3%ADm">Skriptovací jazyky</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
+        <script>
+            const toggleNavInput = document.getElementById('checkbox');
+            const navBlock = document.querySelector('.nav-block');
+
+            toggleNavInput.addEventListener('click', function() {
+            navBlock.classList.toggle('visible');
+            });
+        </script> 
 </body>
 </html>
