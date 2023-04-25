@@ -1,40 +1,48 @@
 html, body {
-    height: 100%;
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 html {
     display: table;
     margin: auto;
+    height: 100%;
+    max-width: 1200px;
+    scroll-behavior: smooth;
 }
 
 body {
-    width:70%;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     font-family: Arial, Helvetica, sans-serif;
-    
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.top-bg{
-    background-image: url(/img/bg.JPG);
-    margin: 0 calc(-50vw + 50%);
-    
+.o-predmetu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
- .o-predmetu{
-    background-color: #E6E6E6;
-    margin: 0 calc(-50vw + 50%);
-    padding-top: 5px;
-    padding-left: 22%;
-    padding-bottom: 4%;
-    margin-top: -18px;
-  }
+.o-predmetu::before{
+  content: '';
+  background-color: #E6E6E6;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0 calc(-50vw + 51%);
+}
 
 .top{
-    padding-left: 15.3%; 
-    padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-name {
@@ -43,56 +51,123 @@ body {
     font-size: 50px;
     text-decoration: none;
     color: white;
+    width: fit-content;
 }
 
 .subtitle {
     font-style: italic;
     font-size: 25px;
     text-decoration: none;
-    margin-top: 0px;
+    margin:0;
+    padding-bottom: 30px;
     color: #B6784B;
 }
  
-  .topnav {
+input{
+  display: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  column-gap: 20px;
+}
+
+.container::after{
+  content: '';
+  background-color: #B15E23;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0 calc(-50vw + 51%);
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  position: relative;
+}
+
+.container > div > span{
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  padding-top: 9.5px;
+  font-size: 13px;
+  height: fit-content;
+}
+
+.container > div > span > a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.container > div > a{
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+}
+
+.topnav {
     list-style: none;
-    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0;
-    
-  }
-  
-  .topnav li {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    padding-left: 0;
+    justify-content: flex-start;
     position: relative;
+}
+ 
+  .topnav li {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    column-gap: 5px;
   }
   
   .topnav li a {
     display: block;
-    padding: 20px;
     text-decoration: none;
     color: white;
-    font-size: 12px;
-    padding-top: 40px;
-    
-    
-  }
-  
-  .topnav li:hover:before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 7%;
-    left: 50%;
-    transform: translateX(-100%);
-    width: 17px;
-    height: 11px;
-    background-image: url(/img/menu_bullet.gif);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
+  .itw-bg{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .itw-bg::before{
+    content: '';
+    background-color:#441F05;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: 0 calc(-50vw + 51%);
+  }
+  
   .topnav li a:first-child{
     padding-left: 0px;
 
   }
-  
   
   .ITW-predmet{
     font-size: 20px;
@@ -101,169 +176,94 @@ body {
   
   .ITW-popis{
     font-size: 12px;
-    line-height: 18px;
-    width: 82%;
+    width: auto;
+    line-height: 16px;
+    margin-bottom: 20px;
   }
 
   .seznam-prednasek h2{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: fit-content;
+    font-size: 20px;
+    color: #b15e23;
+    font-weight: bold;
+  }
+
+  .main{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid; 
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.3fr 0.8fr;
+    
+    gap: 0px;
+    height: fit-content;
   }
 
   .seznam-prednasek{
-    width: 550px;
-    margin-top: 20px;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: fit-content;
+    row-gap: 50px;
   }
 
   .tabulka-prednasek{
-    height: 300px;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
   }
 
-  .tabulka-prednasek div:nth-child(2n){
-    margin-right: 0px;
+  .tabulka-prednasek-grid{
+    display: grid; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    height: 100%;
+  }
+
+  .prednaska{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+
+  .prednaska:nth-child(2){
+    margin-left: 10px;
+  }
+
+  .prednaska:nth-child(4){
+    margin-left: 10px;
   }
   
-  .tabulka-prednasek div{
-    width: 250px;
-    height: 130px;
-    display: inline-block;
-    overflow: hidden;
-    margin-right: 25px;
-
+  .prednaska-section{
+    display: flex;
+    flex-direction: column;
+    
   }
 
-
-  .tabulka-prednasek div a{
-    position: absolute;
-    margin-left: 14px;
-    text-decoration: none;
-    border-bottom: dotted;
-    color:black;
-    font-weight: bold;
-    border-width: 2px;
-    border-color:#CB9873;
-    padding-right: 30px;
+  .prednaska-section a{
     font-size: 15px;
-    width: 160px;
-  }
-
-  .tabulka-prednasek div p{
-    margin-bottom: 0;
-    margin-top: -45px;
-    position:absolute;
-    width: 150px;
-    padding-left: 72px;
-    font-size: 13px;
-    color: #656565;
-    line-height: 19px;
-    width: 190px;
-    word-spacing: 1px;
-    letter-spacing:0px;
-    
-    
-
-  }
-
-  .prednaska-column{
-    width: 200px;
-    height: 290px;
-    display: inline-block;
-    margin-top: 0;
-    padding-right: 65px;
-  }
-
-  
-  h2{
-    font-size: 20px;
-    color: #b15e23;
-  }
-
-  /* .seznam-prednasek a {
-    float:left;
-    margin-top: 0px;
-    text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 15px;
-    border-bottom: dotted;
-    border-color: #b15e23;
-    border-width: 1px;
-    padding-right:30%;
-    padding-bottom: 3px;
-    
+    text-decoration: none;
+    border:#441F05;
+    border-width: 3px;
+    border-style: dotted;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
   }
-    
-
-
-  .seznam-prednasek p {
-    margin-top: 30px;
-    padding-top: 30px;
+  .prednaska-section p{
+    width: fit-content;
     font-size: 13px;
-    color: #656565;
   }
 
-  .seznam-prednasek img{
-    margin-top: -10px;
-  }
-  
-  .prednaska1 a{
-    margin-top: -50px;
-    margin-left: 60px;
-    padding-right: 30px;
-  }
-
-    
-  .prednaska1 p{
-    margin-top: -50px;
-    margin-left: 60px;
-    
-  }
-
-  .img1{}
-
-  .img2{
-    float: left;
-  }
-
-  .prednaska2 a{
-    padding-right: 30%;
-    margin-left: 58px;
-    margin-top: -55px;
-  }
-  
-  .prednaska2 p{
-    padding-top: 35px;
-    
-    
-  }
-
-  .prednaska3 a{
-    margin-top: 0px;
-  }
-  
-  .img3{
-    float: left;
-  }
-
-  .prednaska4 a{
-    padding-right: 50%;
-  }
-  
-  .prednaska4 p{
-   padding-top: 30px;
-   margin-left: 10px;
-  }
-
-  .prednaska4 img{
-    float: left;
-  } */
-  
-  .Hodnoceni{
-    width: 500px;
-    margin-right: 0px;
-    margin-bottom: 30px;
-    
+  .prednaska > img {
+    width: 60px;
+    height: 60px;
   }
   
   .tabulka {
@@ -304,127 +304,146 @@ body {
     text-align:start;
   }
 
-  .Cviceni-popis{
-    height: 500px;
-    margin-left: 30px;
-    margin-top: 5px;
+  .Cviceni-seznam{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .Cviceni-seznam h2{
+    font-size: 20px;
+    color: #b15e23;
+    font-weight: bold;
+  }
+
+  .Cviceni-seznam > div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 15px;
+  }
+
+  .Cviceni-seznam > div > .cviceni-content{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    padding: 10px;
+    padding-left: 0;
+    border: #441F05;
+    border-style: dotted;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .Cviceni-seznam > div > .cviceni-content > img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .Cviceni-seznam > div > a{
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .Cviceni-seznam > div > .cviceni-content > p{
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  .Cviceni-seznam::before{
+    content: '';
+    background-color: #E6E6E6;
+    position: absolute;
+    top:-32px;
+    height: 115%;
+    width: 37.8vw;
+    z-index: -1;
   }
   
   .Cviceni-seznam h2{
-    margin-bottom: 23px;
-    margin-top: 20px;
-  }
-  
-  .Cviceni-seznam{
-    width: 500px;
-    float: right;
-    padding-right: 200px;
-    height: auto;
-    background-color: #E6E6E6;
-    margin: 0 calc(-50vw + 50%);
-    padding-bottom: 40px;
-  }
-  
-  .Cviceni-popis div{
-    height: 105px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-left: 15px;
   }
 
-  .Cviceni-popis p{
-    padding-top: 28px;
-    padding-left: 70px;
-    font-size: 13px;
-    word-spacing: 2px;
-    line-height: 18px;
-    border-bottom: dotted;
-    height: 60px;
-    border-width: 1.5px;
-    color: #656565;
-    border-color: #b15e23;
+  footer{
+    position: relative;
+  }
+
+  footer h2{
+    color: white;
+    font-weight:lighter;
+  }
+
+  footer dt{
+    color: white;
   }
   
-  .Cviceni-seznam a{
+  footer > .kontakty-predmety{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 50px;
+    
+  }
+
+  footer > .kontakty-predmety::after{
+    content: '';
+    background-color: #411D07;
     position: absolute;
-    display: block;
-    float: left;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: 0 calc(-50vw + 51%);
+  }
+
+  footer > .kontakty-predmety > .Kontakty{
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer > .kontakty-predmety > .Kontakty > dl{
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer > .kontakty-predmety > .Kontakty > h2{
+    margin-bottom: 5px;
+  }
+
+  footer > .kontakty-predmety > .Kontakty > dl > div{
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer > .kontakty-predmety > .Kontakty > dl > div > dd > a{
+    color:#b15e23;
     text-decoration: none;
-    font-weight: bold;
-    color: black;
   }
 
-  .Cviceni-seznam img{
-    float: left;
-    margin-top: 30px;
-  }
-
-  .kontakty-predmety div{
-    display: inline-block;
-  }
-
-  .Kontakty{
-    width: 300px;
-  }
-  
-  .Kontakty h2{
-    color: white;
-    font-weight: lighter;
-    margin-bottom: 35px;
-  }
-  
-  .Kontakty div{
-    font-size: 13px;
-    display: inline;
-    line-height: 20px;
-  }
-  
-  .Kontakty a{
-    margin-left: 70px;
-    text-decoration: none;
-    color: #CB9873;
-  }
-  
-  .Kontakty dt{
-    width: auto;
-    float: left;
-    color: white;
-    font-weight: 50;
-  }
-
-  .Kontakty dl{
-    margin-top: 0px;
-    padding-bottom: 0px;
-  }
-
-
-  .Predmety{
-    width: 300px;
-  }
-  
-  .Predmety h2{
-    color: white;
-    font-weight: lighter;
-    margin-top:20px;
-    padding-top: 0px;
-
-  }
-  
   .custom-list {
-    list-style: none;
     padding-left: 0;
-    line-height: 20px;
-    padding-bottom: 30px;
-    
-    
   }
-  
-  .custom-list a{
-    text-decoration: none;
-    color: #CB9873;
-  }
+
   
   .custom-list li {
     position: relative;
     padding-left: 20px;
     font-size: 13px;
+    list-style: none;
+  }
+
+  .custom-list a {
+    color:#b15e23;
+    font-size: 16px;
+    text-decoration: none;
   }
   
   .custom-list li::before{
@@ -432,90 +451,358 @@ body {
     width: 10px;
     height: 10px;
     position: absolute;
-    background-image: url(/img/footer_list_bullet.gif);
+    background-image: url(../img/footer_list_bullet.gif);
     width: 8px;
     height: 8px;
     left: 0;
     top: 20%;
   }
+  
+  @media (max-width: 992px) and (min-width: 768px) {
+    .nav-container #checkbox {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 32px;
+      top: 20px;
+      right: 40px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer;
+    }
 
-  footer{
-    background-color: #441F05;
-    margin: 0 calc(-50vw + 50%);
-    padding-top: 0px;
-    padding-left: 22%;
-    margin-bottom: -10%;
-  }
-
-  @media (min-width: 576px) {
- 
-  body {
-    max-width:100%;
+    .container > div > span{
+      padding-top: 9.5px;
+    }
     
-  }
-
-  .top{
-    padding-left: 20px;
-    padding-top: 20px;
-    width: 100%;
-        
-  }
-
-  .top-bg{
-    background-color: #411D07;
+    .topnav{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
     
+    .topnav li a:last-child {
+      display: none;  
+    }
+
+    .topnav > li{
+      display: flex;
+    }
+  
+    .topnav li i {
+      margin-top: 6.5px;
+    }
+
+    .topnav li a:last-child {
+      display: none;  
+    }
+
+    .topnav li a:first-child {
+      display: block;  
+    }
+
+    .topnav li{
+      display: block;
+      height:fit-content;
+    }
   }
 
-  .topnav{
-    margin-top: 70px;
-    background-color: #B15E23;
-    margin-left: -20px;
-    width: 100%;
-    height: 135px;
+  @media (max-width: 767px) and (min-width: 576px){
+    .topnav li a:last-child {
+      display: none;  
+    }
+
+    .topnav > li{
+      display: flex;
+    }
+  
+    .topnav li i {
+      margin-top: 6.5px;
+    }
+
+    .topnav li a:first-child {
+      display: block;  
+    }
+
+    .container > div > span{
+      padding-top: 9.5px;
+    }
+    
+    .topnav{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .main{
+      display: flex;
+      flex-direction: column;
+      row-gap: 100px;
+    }
+    
+    .tabulka-prednasek-grid{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .Cviceni-seznam::before{
+      content: '';
+      background-color: #E6E6E6;
+      position: absolute;
+      height: 115%;
+      width: 98vw;
+      left: -20px;
+      z-index: -1;
+    }
+
+    .prednaska:nth-child(n+1) {
+      margin-left: 0;
+    }
+
+    footer > .kontakty-predmety{
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
   }
 
-  .topnav li a {
+@media (max-width: 575px) and (min-width: 1px) {
+  
+  .topnav li a:last-child {
     display: block;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding-right: 30px;
-    padding-top: 17px;
-    
+    width: 100%;
+  }
+
+  .topnav > li{
+    display: flex;
+  }
+  .topnav li i {
+    margin-top: 6.5px;
+  }
+
+  .topnav li a:first-child {
+    display: block;
+  }
+
+  .container > div > span {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
   }
   
-  .topnav li a:first-child{
-    padding-left: 28px;
-
+  .topnav{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
   }
 
-  .topnav li {
-    display: inline-block;
+  .topnav > li a{
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .nav-container #checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 40px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .container {
     position: relative;
   }
 
-  .topnav li:first-child {
+  .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
 
-  .o-predmetu{
-    width: 1;
-    float: left;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 4%;
-    margin-top: -18px;
-
+  .container > input{
+      display: block;
   }
-
-  .ITW-popis{
-    font-size: 12px;
-    line-height: 18px;
-    width: 100%;
-    display: block;
-  }
-
-  @media (min-width:768px) {
     
+  .container > nav > ul > li > a{
+      text-decoration: none;
+      color: #0e2431;
+      font-weight: 500;
+      font-size: 2rem;
+      padding: 0.7rem;
+    }
+
+
+  .nav-container #checkbox {
+      position: absolute;
+      display: block;
+      height: 15px;
+      width: 15px;
+      top: 7.5px;
+      right: -2px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer;
+  }
+    
+
+  .nav-container > .hamburger-lines {
+      display: block;
+      height: 15px;
+      width: 18.5px;
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .nav-container >.hamburger-lines .line {
+      display: block;
+      height: 2.5px;
+      width: 100%;
+      border-radius: 10px;
+      background: white;
+  }
+
+  .nav-container > .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+  }
+    
+  .nav-container > .hamburger-lines .line2 {
+      transition: transform 0.2s ease-in-out;
+  }
+    
+  .nav-container > .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-container > nav > ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding: 0; 
+  }
+
+  .nav-container > nav > ul > li {
+      padding: 0;   
+  }
+
+  nav::after{
+    content: '';
+    background-color: #B15E23;
+    position: absolute;
+    left: 50%;
+    margin-left: -55%;
+    height: 115%;
+    z-index: -1;
+    width: 107.7%;
+    min-width: 355px;
+  }
+
+.nav-container > nav {
+    top:0;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    row-gap: 20px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  nav.visible {
+    margin-top: -5px;
+    transition: all 0.5s ease-out;
+    visibility: visible;
+    opacity: 1;
+    top: calc(100% + 0px);
+  }
+
+  .nav-container > input[type="checkbox"]:checked ~ .menu-items {
+      transform: translateX(0);
+  }
+    
+  .nav-container > input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(45deg);
+  }
+    
+  .nav-container > input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+  }
+    
+  .nav-container > input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-45deg);
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+  .tabulka-prednasek-grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Cviceni-seznam::before{
+    content: '';
+    background-color: #E6E6E6;
+    position: absolute;
+    height: 115%;
+    width: 98vw;
+    left: -20px;
+    z-index: -1;
+  }
+
+  .prednaska:nth-child(n+1) {
+    margin-left: 0;
+  }
+
+  footer > .kontakty-predmety{
+    flex-direction: column;
+    row-gap: 30px;
+    padding-left: 10px;
+  }
+
+  footer > .kontakty-predmety::after{
+    left: 50%;
+    margin-left: -55%;
+    min-width: 355px;
+
+  }
+
+  .o-predmetu::before{
+    left: 50%;
+    margin-left: -55%;
+    min-width: 355px;
+  } 
+
+  .itw-bg::before{
+    left: 50%;
+    margin-left: -55%;
+    min-width: 355px;
+  }
+
+  .Cviceni-seznam::before{
+    left: 50%;
+    margin-left: -55%;
+    min-width: 355px;
+  }
+
+  .container::after{
+    left: 50%;
+    margin-left: -55%;
+    min-width: 355px;
   }
 
 }
