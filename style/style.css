@@ -29,7 +29,7 @@ body {
 
 .o-predmetu::before{
   content: '';
-  background-color: #E6E6E6;
+  background-image: linear-gradient(to top,lightgray, white);
   position: absolute;
   background-size: cover;
   top: 0;
@@ -37,7 +37,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-  margin: 0 calc(-50vw + 51%);
+  margin: 0 calc(-50vw + 50.7%);
 }
 
 .top{
@@ -71,7 +71,6 @@ input{
   display: flex;
   flex-direction: row;
   position: relative;
-  column-gap: 20px;
 }
 
 .container::after{
@@ -84,7 +83,7 @@ input{
   right: 0;
   bottom: 0;
   z-index: -1;
-  margin: 0 calc(-50vw + 51%);
+  margin: 0 calc(-50vw + 50.7%);
 }
 
 nav{
@@ -98,9 +97,14 @@ nav{
   display: flex;
   flex-direction: row;
   column-gap: 5px;
-  padding-top: 9.5px;
+  padding: 10px;
   font-size: 13px;
   height: fit-content;
+  cursor: pointer;
+}
+
+.container > div > span:hover{
+  background-color: #441F05;
 }
 
 .container > div > span > a{
@@ -117,12 +121,11 @@ nav{
 
 .topnav {
     list-style: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
     margin: 0;
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
     padding-left: 0;
     justify-content: flex-start;
     position: relative;
@@ -133,6 +136,12 @@ nav{
     position: relative;
     flex-direction: row;
     column-gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .topnav li:hover {
+    background-color:#441F05;
   }
   
   .topnav li a {
@@ -161,7 +170,7 @@ nav{
     right: 0;
     bottom: 0;
     z-index: -1;
-    margin: 0 calc(-50vw + 51%);
+    margin: 0 calc(-50vw + 50.7%);
   }
   
   .topnav li a:first-child{
@@ -356,9 +365,9 @@ nav{
   
   .Cviceni-seznam::before{
     content: '';
-    background-color: #E6E6E6;
+    background-image: linear-gradient(to right,lightgray, white);
     position: absolute;
-    top:-32px;
+    top:-30px;
     height: 115%;
     width: 37.8vw;
     z-index: -1;
@@ -401,7 +410,7 @@ nav{
     right: 0;
     bottom: 0;
     z-index: -1;
-    margin: 0 calc(-50vw + 51%);
+    margin: 0 calc(-50vw + 50.7%);
   }
 
   footer > .kontakty-predmety > .Kontakty{
@@ -475,11 +484,6 @@ nav{
       padding-top: 9.5px;
     }
     
-    .topnav{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    
     .topnav li a:last-child {
       display: none;  
     }
@@ -504,6 +508,30 @@ nav{
       display: block;
       height:fit-content;
     }
+
+    .itw-bg::before{
+        margin: 0 calc(-50vw + 50%);
+    }
+    
+    .Cviceni-seznam::before{
+      height: 112%;
+      width: 100%;
+      left: -20px;
+      z-index: -1;
+      top:-30px;
+    }
+
+    .o-predmetu::before{
+      margin: 0 calc(-50vw + 50%);
+    }
+
+    .container::after{
+      margin: 0 calc(-50vw + 50%);
+    }
+
+    footer > .kontakty-predmety::after{
+      margin: 0 calc(-50vw + 50%);
+    }
   }
 
   @media (max-width: 767px) and (min-width: 576px){
@@ -525,12 +553,7 @@ nav{
 
     .container > div > span{
       padding-top: 9.5px;
-    }
-    
-    .topnav{
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+    } 
 
     .main{
       display: flex;
@@ -544,11 +567,8 @@ nav{
     }
     
     .Cviceni-seznam::before{
-      content: '';
-      background-color: #E6E6E6;
-      position: absolute;
       height: 115%;
-      width: 98vw;
+      width: 98.8vw;
       left: -20px;
       z-index: -1;
     }
@@ -562,6 +582,22 @@ nav{
       row-gap: 30px;
     }
 
+    .itw-bg::before{
+      margin: 0 calc(-50vw + 50%);
+    }
+
+
+    .o-predmetu::before{
+      margin: 0 calc(-50vw + 50%);
+    }
+
+    .container::after{
+      margin: 0 calc(-50vw + 50%);
+    }
+
+    footer > .kontakty-predmety::after{
+      margin: 0 calc(-50vw + 50%);
+    }
   }
 
 @media (max-width: 575px) and (min-width: 1px) {
@@ -574,6 +610,7 @@ nav{
   .topnav > li{
     display: flex;
   }
+  
   .topnav li i {
     margin-top: 6.5px;
   }
@@ -593,11 +630,6 @@ nav{
     width: 100%;
   }
 
-  .topnav > li a{
-    padding-top: 7px;
-    padding-bottom: 7px;
-  }
-
   .nav-container #checkbox {
     position: absolute;
     display: block;
@@ -612,6 +644,14 @@ nav{
 
   .container {
     position: relative;
+  }
+
+  .sticky {
+    position: fixed;
+    width: 92%;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
   }
 
   .nav-container {
@@ -652,7 +692,7 @@ nav{
       width: 18.5px;
       position: absolute;
       top: 10px;
-      right: 0px;
+      right: -2px;
       z-index: 2;
       display: flex;
       flex-direction: column;
@@ -689,19 +729,13 @@ nav{
   }
 
   .nav-container > nav > ul > li {
-      padding: 0;   
+    padding: 10px; 
   }
 
-  nav::after{
-    content: '';
+  .topnav {
     background-color: #B15E23;
-    position: absolute;
-    left: 50%;
-    margin-left: -55%;
-    height: 115%;
-    z-index: -1;
-    width: 107.7%;
-    min-width: 355px;
+    margin: 0 calc(-50vw + 50%);
+    height: fit-content;
   }
 
 .nav-container > nav {
@@ -720,7 +754,7 @@ nav{
   }
 
   nav.visible {
-    margin-top: -5px;
+    margin-top: 0px;
     transition: all 0.5s ease-out;
     visibility: visible;
     opacity: 1;
@@ -762,6 +796,7 @@ nav{
     width: 98vw;
     left: -20px;
     z-index: -1;
+    
   }
 
   .prednaska:nth-child(n+1) {
